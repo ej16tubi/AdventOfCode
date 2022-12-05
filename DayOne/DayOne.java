@@ -13,16 +13,16 @@ public class DayOne
 {
     public ArrayList<Integer> totals = new ArrayList<Integer>();
     public static ArrayList<Integer> calss = new ArrayList<Integer>();
-    public static void main(String args[]) throws FileNotFoundException{
-        try{ 
+    public static void main(String args[]) {
             File in = new File("DayOneInputs.txt");
-            readFile(in);
-        }catch(FileNotFoundException object){
-            object.printStackTrace();
-        }
+            try {
+                readFile(in);
+            }catch (FileNotFoundException e){
+                System.out.println("file not found");
+            }
         }
 
-        public static void readFile(File enter){
+        public static void readFile(File enter)throws FileNotFoundException{
             Scanner scan = new Scanner(enter);
             while (scan.hasNextInt()){
                 calss.add(scan.nextInt());
