@@ -16,7 +16,7 @@ public class DayOne
     public static void main(String args[]) throws FileNotFoundException{
         try{ 
             File in = new File("DayOneInputs.txt");
-            calss = readFile(in);
+            readFile(in);
         }catch(IOException object){
             object.printStackTrace();
         }
