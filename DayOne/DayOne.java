@@ -9,34 +9,13 @@ import java.util.ArrayList;
  */
 public class DayOne
 {
-
-
+    public List<Integer> totals = new ArrayList<Integer>();
+    public static List<Integer> calss = new ArrayList<Integer>();
     public static void main(String args[]){
         File in = new File("DayOneInputs.txt");
         Scanner scan = new Scanner(in);
-        ArrayList<Integer> calss = new ArrayList<Integer>();
-        ArrayList<T> elfs = new ArrayList<T>();
-        while(scan.hasNextLine()){
-            int index = 0;
-            String innerds = scan.nextLine();
-            if(innerds.equals("\n")){
-                index++;
-            }else{
-                Integer cals = (int) innerds;
-                calss.add(index, cals);
-
-            }
-
+        while (scanner.hasNextInt()){
+            calss.add(scanner.nextInt());
         }
-        for(int i = 0; i < calss.size(); i++){
-            if(calss.get(i) == null){
-                i++;
-            }else{
-                
-            }
         }
-
-
-
     }
-}
