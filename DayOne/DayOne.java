@@ -22,14 +22,11 @@ public class DayOne
         }
         }
 
-        public static ArrayList<Integer>[] readFile(File enter){
+        public static void readFile(File enter){
             Scanner scan = new Scanner(enter);
-            ArrayList<Integer> take = new ArrayList<Integer>();
             while (scan.hasNextInt()){
-                take.add(scan.nextInt());
+                calss.add(scan.nextInt());
             }
             scan.close();
-            return take;
-
         }
     }
