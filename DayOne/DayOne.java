@@ -1,4 +1,6 @@
-
+import java.util.Scanner;
+import java.util.StringBuffer;
+import java.util.ArrayList;
 /**
  * Write a description of class DayOne here.
  *
@@ -7,27 +9,34 @@
  */
 public class DayOne
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class DayOne
-     */
-    public DayOne()
-    {
-        // initialise instance variables
-        x = 0;
-    }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main(String args[]){
+        File in = new File("DayOneInputs.txt");
+        Scanner scan = new Scanner(in);
+        ArrayList<Integer> calss = new ArrayList<Integer>();
+        ArrayList<T> elfs = new ArrayList<T>();
+        while(scan.hasNextLine()){
+            int index = 0;
+            String innerds = scan.nextLine();
+            if(innerds.equals("\n")){
+                index++;
+            }else{
+                Integer cals = (int) innerds;
+                calss.add(index, cals);
+
+            }
+
+        }
+        for(int i = 0; i < calss.size(); i++){
+            if(calss.get(i) == null){
+                i++;
+            }else{
+                
+            }
+        }
+
+
+
     }
 }
