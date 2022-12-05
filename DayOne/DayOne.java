@@ -17,7 +17,7 @@ public class DayOne
         try{ 
             File in = new File("DayOneInputs.txt");
             readFile(in);
-        }catch(IOException object){
+        }catch(FileNotFoundException object){
             object.printStackTrace();
         }
         }
