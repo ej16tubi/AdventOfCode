@@ -20,6 +20,12 @@ public class DayOne
                 System.out.println(e.toString());
             }
         }
+        /**
+         * Reads the file I have hard coded in because
+         * the user doesn't need to mess with this
+         * they will break it.
+         * @throws FileNotFoundException
+         */
 
         public static void readFile()throws FileNotFoundException{
             Scanner scan = new Scanner(new File("/Users/ethantubia/Documents/CS/AdventOfCode/DayOne/DayOneInputs.txt"));
