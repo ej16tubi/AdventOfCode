@@ -12,20 +12,21 @@ import java.io.IOException;
 public class DayOne
 {
     public ArrayList<Integer> totals = new ArrayList<Integer>();
-    public static ArrayList<Integer> calss = new ArrayList<Integer>();
+    public static ArrayList<String> calss = new ArrayList<String>();
     public static void main(String args[]) {
-            File in = new File("DayOneInputs.txt");
             try {
-                readFile(in);
+                readFile();
             }catch (FileNotFoundException e){
-                System.out.println("file not found");
+                System.out.println(e.toString());
             }
         }
 
-        public static void readFile(File enter)throws FileNotFoundException{
-            Scanner scan = new Scanner(enter);
-            while (scan.hasNextInt()){
-                calss.add(scan.nextInt());
+        public static void readFile()throws FileNotFoundException{
+            Scanner scan = new Scanner(new File("/Users/ethantubia/Documents/CS/AdventOfCode/DayOne/DayOneInputs.txt"));
+            while (scan.hasNext()){
+                String s = scan.nextLine();
+                calss.add(s);
+
             }
             scan.close();
         }
