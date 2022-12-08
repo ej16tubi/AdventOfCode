@@ -11,11 +11,20 @@ import java.io.IOException;
  */
 public class DayOne
 {
-    public ArrayList<Integer> totals = new ArrayList<Integer>();
+    public static ArrayList<Integer> totals = new ArrayList<Integer>();
     public static ArrayList<String> calss = new ArrayList<String>();
     public static void main(String args[]) {
             try {
                 readFile();
+                breakcalss();
+                int[] totes = totals.toArray();
+                int largest = 0;
+                for (int i = 0; i < totes.length; i++){
+                    if(totes[i] > largest){
+                        largest = totes[i];
+                    }
+                }
+                System.out.println(largest);
             }catch (FileNotFoundException e){
                 System.out.println(e.toString());
             }
@@ -35,5 +44,28 @@ public class DayOne
 
             }
             scan.close();
+        }
+
+        public static void breakcalss(){
+            //This line below removes extranious stuff from the file
+            for(int i = 0; i < 9; i++){
+                calss.remove(i);
+            }
+            int j = 0;
+            for(int i = 0; i < calss.size(); i++){
+                String s = calss.get(i);
+                
+                if(s.equalsIgnoreCase("/")){
+                    i++;
+                    totals.add(j);
+                    j = 0;
+                }else{
+                    Integer k = Integer.parseInt(s);
+                    j = j + k;
+                }
+
+            }
+
+
         }
     }
